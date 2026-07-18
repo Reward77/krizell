@@ -1,0 +1,71 @@
+/* =========================================================
+   KRIZELL — keyframes, motion utilities & scroll reveals
+   ========================================================= */
+
+/* ------------------------------ Keyframes ------------------------------ */
+@keyframes krizell-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(2deg); }
+}
+
+@keyframes krizell-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(20px, -16px) scale(1.05); }
+}
+
+@keyframes krizell-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.35; transform: scale(1.6); }
+}
+
+@keyframes krizell-mic {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.63 0.19 32 / .35), 0 0 0 10px oklch(0.63 0.19 32 / .12); }
+  50%      { box-shadow: 0 0 0 14px oklch(0.63 0.19 32 / .18), 0 0 0 28px oklch(0.63 0.19 32 / 0); }
+}
+
+@keyframes krizell-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes krizell-shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* -------------------------- Motion utilities -------------------------- */
+.animate-float      { animation: krizell-float 6s ease-in-out infinite; }
+.animate-float-slow { animation: krizell-float 9s ease-in-out infinite; }
+.animate-drift      { animation: krizell-drift 12s ease-in-out infinite; }
+.animate-blink      { animation: krizell-blink 2s ease-in-out infinite; }
+.animate-mic        { animation: krizell-mic 2.2s ease-in-out infinite; }
+.animate-rise       { animation: krizell-rise 0.9s var(--ease-out) both; }
+
+/* ----------------------------- Shimmer text ----------------------------- */
+.shimmer-text {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--ink) 0%, var(--tomato) 40%, var(--honey) 60%, var(--ink) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: krizell-shimmer 6s linear infinite;
+}
+
+/* ----------------------------- Scroll reveal ----------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal-delay="1"] { transition-delay: 0.08s; }
+[data-reveal-delay="2"] { transition-delay: 0.18s; }
+[data-reveal-delay="3"] { transition-delay: 0.28s; }
+[data-reveal-delay="4"] { transition-delay: 0.4s; }
+[data-reveal-delay="5"] { transition-delay: 0.52s; }

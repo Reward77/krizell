@@ -1,0 +1,119 @@
+/* =========================================================
+   KRIZELL — responsive rules
+   Breakpoints mirror the original: sm 640px, md 768px, lg 1024px
+   ========================================================= */
+
+/* ------------------------------ sm: 640px ------------------------------ */
+@media (min-width: 640px) {
+  .nav__inner { padding-inline: 1.5rem; }
+
+  .hero__trust-sep { display: inline; }
+
+  .hero__visual { height: 560px; }
+
+  .problem__stat { display: block; }
+
+  .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .waitlist__form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .footer__bottom { flex-direction: row; }
+}
+
+/* ------------------------------ md: 768px ------------------------------ */
+@media (min-width: 768px) {
+  .nav__links { display: flex; }
+
+  .hero {
+    padding-top: 11rem;
+    padding-bottom: 8rem;
+    padding-inline: 2.5rem;
+  }
+
+  .hero__lede {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  .section {
+    padding-inline: 2.5rem;
+    padding-block: 8rem;
+  }
+
+  .step { margin-top: 6rem; }
+
+  .step__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .features {
+    padding: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .culture__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .culture-cell--tall {
+    grid-row: span 2 / span 2;
+    height: auto;
+  }
+
+  .culture-cell--wide-sm { grid-column: auto; }
+
+  .waitlist__card { padding: 3.5rem; }
+
+  .waitlist__form { padding: 1.75rem; }
+
+  .footer {
+    padding-inline: 2.5rem;
+  }
+
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+/* ------------------------------ lg: 1024px ------------------------------ */
+@media (min-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 5rem;
+  }
+
+  .problem__grid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 5rem;
+  }
+
+  .product__grid {
+    grid-template-columns: 1fr 1.05fr;
+  }
+
+  .waitlist__grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+/* ---------------------- Reduced motion preference ---------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .animate-float,
+  .animate-float-slow,
+  .animate-drift,
+  .animate-blink,
+  .animate-mic,
+  .shimmer-text {
+    animation: none;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
