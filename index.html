@@ -1,6 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <!-- Structured data (invisible) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://krizell.com/#organization",
+        "name": "Krizell",
+        "url": "https://krizell.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://krizell.com/assets/icons/apple-touch-icon.png",
+          "width": 180,
+          "height": 180
+        },
+        "description": "Krizell builds a voice-guided AI cooking companion that talks home cooks through dishes like jollof rice, suya and egusi soup step by step, preserving culinary knowledge while making it accessible to everyone."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://krizell.com/#website",
+        "url": "https://krizell.com/",
+        "name": "Krizell",
+        "publisher": { "@id": "https://krizell.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": ["SoftwareApplication", "MobileApplication"],
+        "@id": "https://krizell.com/#app",
+        "name": "Krizell",
+        "url": "https://krizell.com/",
+        "description": "Krizell is a voice-guided AI cooking companion. Choose a dish such as jollof rice, suya or egusi soup, choose a teaching personality (Amara, Chef Marcus or Sam), and cook hands-free with real-time voice guidance, step timers and technique teaching.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder"
+        },
+        "featureList": [
+          "Hands-free voice-guided cooking",
+          "Three teaching personalities: Amara, Chef Marcus and Sam",
+          "Step-by-step guidance for all dishes",
+          "Built-in step timers",
+          "Teaches sensory cues and real technique"
+        ],
+        "publisher": { "@id": "https://krizell.com/#organization" }
+      }
+    ]
+  }
+  </script>
+</head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Krizell — Your voice-guided cooking companion</title>
@@ -11,14 +63,24 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Krizell — Your voice-guided cooking companion" />
+  <meta property="og:site_name" content="Krizell" />
   <meta name="twitter:description" content="Join the waitlist for Krizell — krizell, your AI cooking companion, talks you through every step, teaches real technique, and celebrates cultural cooking." />
-
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="mCKRUvdoJ6-98Z1hgDP4O8PRCWhsWuDGa_uVFKbxke0" />
+  
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" />
 
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Crawlability: reveal content when JavaScript is unavailable (no visual effect in browsers) -->
+  <noscript>
+    <style>[data-reveal]{opacity:1 !important;transform:none !important;}</style>
+  </noscript>
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
@@ -35,7 +97,8 @@
     <div aria-hidden="true" class="bg-grain"></div>
 
     <!-- ================================ NAV ================================ -->
-    <nav class="nav" id="nav">
+    <header>
+    <nav class="nav" id="nav" aria-label="Main">
       <div class="nav__inner">
         <a href="#top" class="nav__logo"><span class="nav__logo-dot">●</span> Krizell</a>
         <ul class="nav__links">
@@ -49,6 +112,10 @@
         </button>
       </div>
     </nav>
+    </header>
+
+    <main id="main">
+
 
     <!-- =============================== HERO ================================ -->
     <section id="top" class="hero">
@@ -87,9 +154,9 @@
           <!-- trust row -->
           <div class="hero__trust" data-reveal data-reveal-delay="4">
             <div class="hero__avatars">
-              <img src="assets/images/lady.png" alt="" />
-              <img src="assets/images/companion-sam.jpg" alt="" />
-              <img src="assets/images/companion-marcus.jpg" alt="" />
+              <img src="assets/images/lady.png" alt="" loading="lazy" decoding="async" />
+              <img src="assets/images/companion-sam.jpg" alt="" loading="lazy" decoding="async" />
+              <img src="assets/images/companion-marcus.jpg" alt="" loading="lazy" decoding="async" />
             </div>
             <span>
             <span class="hero__trust-sep">·</span>
@@ -101,7 +168,7 @@
         <div class="hero__visual">
           <div aria-hidden="true" class="hero__glow animate-drift"></div>
           <div class="hero__bowl animate-float">
-            <img src="assets/images/spag.jpeg" alt="A warm bowl of jollof rice" width="1200" height="1200" />
+            <img src="assets/images/spag.jpeg" alt="A warm bowl of jollof rice" width="1200" height="1200" fetchpriority="high" decoding="async" />
             <div aria-hidden="true" class="hero__bowl-sheen"></div>
           </div>
 
@@ -163,7 +230,7 @@
 
         <div class="problem__visual" data-reveal data-reveal-delay="2">
           <div class="problem__photo">
-            <img src="assets/images/problem-teach.jpg" alt="Hands teaching another to stir a pot" loading="lazy" />
+            <img src="assets/images/problem-teach.jpg" alt="Hands teaching another to stir a pot" loading="lazy" decoding="async" />
             <div aria-hidden="true" class="problem__photo-shade"></div>
             <div class="problem__caption">
               <div class="problem__quote">&ldquo;Feel it. Listen. Now stir.&rdquo;</div>
@@ -201,7 +268,7 @@
           </div>
           <div class="cards-3">
             <div class="dish" data-reveal data-reveal-delay="1">
-              <img src="assets/images/rice.jpeg" alt="Jollof Rice" loading="lazy" />
+              <img src="assets/images/rice.jpeg" alt="Jollof Rice" loading="lazy" decoding="async" />
               <div aria-hidden="true" class="dish__shade"></div>
               <div class="dish__label">
                 <div class="dish__name">Jollof Rice</div>
@@ -210,7 +277,7 @@
               <span class="dish__tag">Signature</span>
             </div>
             <div class="dish" data-reveal data-reveal-delay="2">
-              <img src="assets/images/suya.jpeg" alt="Suya Skewers" loading="lazy" />
+              <img src="assets/images/suya.jpeg" alt="Suya Skewers" loading="lazy" decoding="async" />
               <div aria-hidden="true" class="dish__shade"></div>
               <div class="dish__label">
                 <div class="dish__name">Suya Skewers</div>
@@ -219,7 +286,7 @@
               <span class="dish__tag">Grill</span>
             </div>
             <div class="dish" data-reveal data-reveal-delay="3">
-              <img src="assets/images/egusi.jpeg" alt="Egusi Soup" loading="lazy" />
+              <img src="assets/images/egusi.jpeg" alt="Egusi Soup" loading="lazy" decoding="async" />
               <div aria-hidden="true" class="dish__shade"></div>
               <div class="dish__label">
                 <div class="dish__name">Egusi Soup</div>
@@ -254,7 +321,7 @@
             <div class="companion companion--marcus" data-reveal data-reveal-delay="2">
               <div class="companion__inner">
                 <div class="companion__photo">
-                  <img src="assets/images/companion-marcus.jpg" alt="Chef Marcus" loading="lazy" />
+                  <img src="assets/images/companion-marcus.jpg" alt="Chef Marcus" loading="lazy" decoding="async" />
                 </div>
                 <div class="companion__meta">
                   <div class="companion__name">Chef Marcus</div>
@@ -265,7 +332,7 @@
             <div class="companion companion--sam" data-reveal data-reveal-delay="3">
               <div class="companion__inner">
                 <div class="companion__photo">
-                  <img src="assets/images/companion-sam.jpg" alt="Sam" loading="lazy" />
+                  <img src="assets/images/companion-sam.jpg" alt="Sam" loading="lazy" decoding="async" />
                 </div>
                 <div class="companion__meta">
                   <div class="companion__name">Sam</div>
@@ -403,7 +470,7 @@
 
         <div class="culture__grid">
           <div class="culture-cell culture-cell--wide culture-cell--tall" data-reveal data-reveal-delay="1">
-            <img src="assets/images/vegetable.jpeg" alt="African ingredients" loading="lazy" />
+            <img src="assets/images/vegetable.jpeg" alt="African ingredients" loading="lazy" decoding="async" />
             <div aria-hidden="true" class="culture-cell__shade"></div>
             <div class="culture-cell__label">
               <div class="culture-cell__title">African ingredients</div>
@@ -411,7 +478,7 @@
             </div>
           </div>
           <div class="culture-cell" data-reveal data-reveal-delay="2">
-            <img src="assets/images/french.jpeg" alt="Street food culture" loading="lazy" />
+            <img src="assets/images/french.jpeg" alt="Street food culture" loading="lazy" decoding="async" />
             <div aria-hidden="true" class="culture-cell__shade"></div>
             <div class="culture-cell__label">
               <div class="culture-cell__title">French Culinary culture</div>
@@ -419,7 +486,7 @@
             </div>
           </div>
           <div class="culture-cell" data-reveal data-reveal-delay="3">
-            <img src="assets/images/chicken.jpeg" alt="Traditional stews" loading="lazy" />
+            <img src="assets/images/chicken.jpeg" alt="Traditional stews" loading="lazy" decoding="async" />
             <div aria-hidden="true" class="culture-cell__shade"></div>
             <div class="culture-cell__label">
               <div class="culture-cell__title">Traditional British Chicken soup</div>
@@ -427,7 +494,7 @@
             </div>
           </div>
           <div class="culture-cell culture-cell--wide culture-cell--wide-sm" data-reveal data-reveal-delay="4">
-            <img src="assets/images/salad.jpeg" alt="Celebration dishes" loading="lazy" />
+            <img src="assets/images/salad.jpeg" alt="Celebration dishes" loading="lazy" decoding="async" />
             <div aria-hidden="true" class="culture-cell__shade"></div>
             <div class="culture-cell__label">
               <div class="culture-cell__title">For Everyone</div>
@@ -435,7 +502,7 @@
             </div>
           </div>
           <div class="culture-cell" data-reveal data-reveal-delay="5">
-            <img src="assets/images/ramen.jpeg" alt="Everyday soups" loading="lazy" />
+            <img src="assets/images/ramen.jpeg" alt="Everyday soups" loading="lazy" decoding="async" />
             <div aria-hidden="true" class="culture-cell__shade"></div>
             <div class="culture-cell__label">
               <div class="culture-cell__title">Asian noodle masterpiece</div>
@@ -543,7 +610,7 @@
         </div>
       </div>
     </section>
-
+    </main>
     <!-- =============================== FOOTER ============================== -->
     <footer class="footer">
       <div class="footer__grid">
