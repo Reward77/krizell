@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://krizell.com/sitemap.xml
