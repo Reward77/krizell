@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krizell — Your voice-guided cooking companion</title>
+  <meta name="description" content="Join the waitlist for Krizell — Krizell, your AI cooking companion, talks you through every step, teaches real technique, and celebrates cultural cooking." />
+  <meta name="author" content="Krizell" />
+  <meta property="og:title" content="Krizell — Your voice-guided cooking companion" />
+  <meta property="og:description" content="Join the waitlist for Krizell — Krizell, your AI cooking companion, talks you through every step, teaches real technique, and celebrates cultural cooking." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Krizell — Your voice-guided cooking companion" />
+  <meta name="twitter:description" content="Join the waitlist for Krizell — krizell, your AI cooking companion, talks you through every step, teaches real technique, and celebrates cultural cooking." />
+
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script src="js/helpers.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <!-- ambient background gradients -->
+    <div aria-hidden="true" class="bg-ambient"></div>
+    <!-- subtle grain -->
+    <div aria-hidden="true" class="bg-grain"></div>
+
+    <!-- ================================ NAV ================================ -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#top" class="nav__logo"><span class="nav__logo-dot">●</span> Krizell</a>
+        <ul class="nav__links">
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#product">Experience</a></li>
+          <li><a href="#culture">Culture</a></li>
+        </ul>
+        <button class="nav__cta" type="button" data-scroll-to="waitlist">
+          Join Waitlist
+          <span aria-hidden="true" class="nav__cta-arrow">→</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- =============================== HERO ================================ -->
+    <section id="top" class="hero">
+      <div class="hero__grid">
+        <!-- left -->
+        <div class="hero__left">
+          <div class="hero__badge glass" data-reveal>
+            <span class="hero__badge-ping">
+              <span class="ping animate-blink"></span>
+              <span class="dot"></span>
+            </span>
+            Voice-guided cooking companion
+          </div>
+
+          <h1 class="hero__title" data-reveal data-reveal-delay="1">
+            Cook like someone <span class="shimmer-text">you love</span> is teaching you.
+          </h1>
+
+          <p class="hero__lede" data-reveal data-reveal-delay="2">
+            Krizell is your warm, patient AI cooking companion. She listens, guides you
+            through every step out loud, and teaches you the small things recipes never do
+            so you never cook alone again.
+          </p>
+
+          <div class="hero__actions" data-reveal data-reveal-delay="3">
+            <button class="btn-primary" type="button" data-scroll-to="waitlist">
+              <span>Join the Waitlist</span>
+              <span aria-hidden="true" class="btn-primary__arrow">→</span>
+            </button>
+            <button class="btn-secondary" type="button" data-scroll-to="how">
+              <span aria-hidden="true" class="btn-secondary__play">▶</span>
+              See how it works
+            </button>
+          </div>
+
+          <!-- trust row -->
+          <div class="hero__trust" data-reveal data-reveal-delay="4">
+            <div class="hero__avatars">
+              <img src="assets/images/lady.png" alt="" />
+              <img src="assets/images/companion-sam.jpg" alt="" />
+              <img src="assets/images/companion-marcus.jpg" alt="" />
+            </div>
+            <span>
+            <span class="hero__trust-sep">·</span>
+            <span>Launching quietly, soon</span>
+          </div>
+        </div>
+
+        <!-- right visual -->
+        <div class="hero__visual">
+          <div aria-hidden="true" class="hero__glow animate-drift"></div>
+          <div class="hero__bowl animate-float">
+            <img src="assets/images/spag.jpeg" alt="A warm bowl of jollof rice" width="1200" height="1200" />
+            <div aria-hidden="true" class="hero__bowl-sheen"></div>
+          </div>
+
+          <!-- floating chips -->
+          <div class="chip chip--voice glass-card animate-float-slow">
+            <span class="chip__icon">🎙️</span>
+            <div class="chip__body">
+              <div class="chip__title">Krizell</div>
+              <div class="chip__subtitle">"Add the onions when the oil sings."</div>
+            </div>
+          </div>
+          <div class="chip chip--timer chip--accent glass-card animate-float-slow">
+            <span class="chip__icon">⏱️</span>
+            <div class="chip__body">
+              <div class="chip__title">Sautéing</div>
+              <div class="chip__subtitle">00:30</div>
+            </div>
+          </div>
+          <div class="chip chip--basil glass-card animate-float-slow">
+            <span class="chip__icon">🌿</span>
+            <div class="chip__body">
+              <div class="chip__title">Fresh basil</div>
+              <div class="chip__subtitle">Tear, don't cut</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROBLEM ============================== -->
+    <section class="section">
+      <div class="problem__grid">
+        <div data-reveal>
+          <div class="eyebrow eyebrow--muted problem__eyebrow">Why Krizell</div>
+          <h2 class="problem__title">
+            Recipes tell you <span class="text-tomato">what</span> to do.
+            <br />
+            They don't teach you <em class="text-terracotta">how</em> to cook.
+          </h2>
+          <p class="problem__lede">
+            A recipe is a list of steps. Krizell is a conversation,  the warmth of learning
+            from someone who has cooked this dish a hundred times, standing right beside you.
+          </p>
+          <ul class="problem__list">
+            <li>
+              <span class="problem__check">✓</span>
+              <span>Hands-free voice guidance  no scrolling with sticky fingers</span>
+            </li>
+            <li>
+              <span class="problem__check">✓</span>
+              <span>Learn the sensory cues: sound, smell, sight</span>
+            </li>
+            <li>
+              <span class="problem__check">✓</span>
+              <span>Encouragement when things get tricky, not just instructions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="problem__visual" data-reveal data-reveal-delay="2">
+          <div class="problem__photo">
+            <img src="assets/images/problem-teach.jpg" alt="Hands teaching another to stir a pot" loading="lazy" />
+            <div aria-hidden="true" class="problem__photo-shade"></div>
+            <div class="problem__caption">
+              <div class="problem__quote">&ldquo;Feel it. Listen. Now stir.&rdquo;</div>
+              <div class="problem__caption-sub">The way we all learned to cook, before recipes.</div>
+            </div>
+          </div>
+          <!-- accent card -->
+          <div class="problem__stat glass-card">
+            <div class="problem__stat-n">1:1</div>
+            <div class="problem__stat-l">Like your own chef, in your pocket</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ HOW IT WORKS =========================== -->
+    <section id="how" class="section how">
+      <div class="how__container">
+        <div class="how__header" data-reveal>
+          <div class="eyebrow eyebrow--tomato">How it works</div>
+          <h2 class="how__title">
+            Three beautiful steps from <span class="text-terracotta">discovery</span> to dinner.
+          </h2>
+          <p class="how__lede">Choose a dish. Choose your companion. Cook together  hands-free.</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step__head" data-reveal>
+            <span class="step__number">1</span>
+            <div>
+              <div class="step__title">Choose your dish</div>
+              <div class="step__subtitle">Beautiful, global, always tempting.</div>
+            </div>
+          </div>
+          <div class="cards-3">
+            <div class="dish" data-reveal data-reveal-delay="1">
+              <img src="assets/images/rice.jpeg" alt="Jollof Rice" loading="lazy" />
+              <div aria-hidden="true" class="dish__shade"></div>
+              <div class="dish__label">
+                <div class="dish__name">Jollof Rice</div>
+                <div class="dish__origin">Nigeria · Ghana · Senegal</div>
+              </div>
+              <span class="dish__tag">Signature</span>
+            </div>
+            <div class="dish" data-reveal data-reveal-delay="2">
+              <img src="assets/images/suya.jpeg" alt="Suya Skewers" loading="lazy" />
+              <div aria-hidden="true" class="dish__shade"></div>
+              <div class="dish__label">
+                <div class="dish__name">Suya Skewers</div>
+                <div class="dish__origin">Northern Nigeria</div>
+              </div>
+              <span class="dish__tag">Grill</span>
+            </div>
+            <div class="dish" data-reveal data-reveal-delay="3">
+              <img src="assets/images/egusi.jpeg" alt="Egusi Soup" loading="lazy" />
+              <div aria-hidden="true" class="dish__shade"></div>
+              <div class="dish__label">
+                <div class="dish__name">Egusi Soup</div>
+                <div class="dish__origin">West &amp; Central Africa</div>
+              </div>
+              <span class="dish__tag">Soup</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step__head" data-reveal>
+            <span class="step__number">2</span>
+            <div>
+              <div class="step__title">Choose your companion</div>
+              <div class="step__subtitle">A teaching personality that fits how you learn.</div>
+            </div>
+          </div>
+          <div class="cards-3">
+            <div class="companion companion--amara" data-reveal data-reveal-delay="1">
+              <div class="companion__inner">
+                <div class="companion__photo">
+                  <img src="assets/images/lady.png" alt="Amara" loading="lazy" />
+                </div>
+                <div class="companion__meta">
+                  <div class="companion__name">Amara</div>
+                  <div class="companion__role">Warm · Traditional · Patient</div>
+                </div>
+              </div>
+            </div>
+            <div class="companion companion--marcus" data-reveal data-reveal-delay="2">
+              <div class="companion__inner">
+                <div class="companion__photo">
+                  <img src="assets/images/companion-marcus.jpg" alt="Chef Marcus" loading="lazy" />
+                </div>
+                <div class="companion__meta">
+                  <div class="companion__name">Chef Marcus</div>
+                  <div class="companion__role">Precise · Technical · Expert</div>
+                </div>
+              </div>
+            </div>
+            <div class="companion companion--sam" data-reveal data-reveal-delay="3">
+              <div class="companion__inner">
+                <div class="companion__photo">
+                  <img src="assets/images/companion-sam.jpg" alt="Sam" loading="lazy" />
+                </div>
+                <div class="companion__meta">
+                  <div class="companion__name">Sam</div>
+                  <div class="companion__role">Encouraging · Beginner-friendly</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step__head" data-reveal>
+            <span class="step__number">3</span>
+            <div>
+              <div class="step__title">Cook together</div>
+              <div class="step__subtitle">Real-time voice guidance. Seamless, human, alive.</div>
+            </div>
+          </div>
+          <div class="features glass-card" data-reveal>
+            <div data-reveal data-reveal-delay="1">
+              <div class="feature__icon">🎙️</div>
+              <div class="feature__title">Just talk</div>
+              <div class="feature__text">Say &ldquo;I'm ready&rdquo;  Krizell moves at your pace.</div>
+            </div>
+            <div data-reveal data-reveal-delay="2">
+              <div class="feature__icon">👂</div>
+              <div class="feature__title">She listens</div>
+              <div class="feature__text">Ask anything mid-cook, no scrolling required.</div>
+            </div>
+            <div data-reveal data-reveal-delay="3">
+              <div class="feature__icon">❤️</div>
+              <div class="feature__title">You grow</div>
+              <div class="feature__text">Real cues, real technique  remembered next time.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PRODUCT ============================== -->
+    <section id="product" class="section">
+      <div class="product__grid">
+        <div data-reveal>
+          <div class="eyebrow eyebrow--tomato">The experience</div>
+          <h2 class="product__title">
+            Like having a chef in your kitchen  <span class="text-terracotta">without the pressure.</span>
+          </h2>
+          <p class="product__lede">
+            Cooking Mode gives you a beautiful, focused view. Krizell times steps, listens
+            for your voice, and gently walks you through every sizzle, stir and taste.
+          </p>
+
+          <div class="product__features">
+            <div class="product__feature">
+              <div class="product__feature-t">Voice-first</div>
+              <div class="product__feature-s">Zero taps</div>
+            </div>
+            <div class="product__feature">
+              <div class="product__feature-t">Timer aware</div>
+              <div class="product__feature-s">Never overcook</div>
+            </div>
+            <div class="product__feature">
+              <div class="product__feature-t">Cultural</div>
+              <div class="product__feature-s">Real recipes, real roots</div>
+            </div>
+            <div class="product__feature">
+              <div class="product__feature-t">Personal</div>
+              <div class="product__feature-s">Learns your kitchen</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__visual" data-reveal data-reveal-delay="2">
+          <!-- ambient glow -->
+          <div aria-hidden="true" class="product__glow"></div>
+          <!-- phone mockup -->
+          <div class="phone">
+            <div aria-hidden="true" class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__status">
+                <span class="font-display">9:41</span>
+                <span class="phone__status-right">●●● 🔋</span>
+              </div>
+              <div class="phone__body">
+                <div class="phone__app-name">Krizell</div>
+                <div class="phone__app-sub">
+                  Cooking Mode
+                  <br />
+                  Your personal guide, every step.
+                </div>
+                <div class="phone__mic-row">
+                  <div class="phone__mic animate-mic">🎙️</div>
+                </div>
+                <div class="phone__timer">00:30</div>
+                <div class="phone__timer-sub">Sautéing aromatics</div>
+                <div class="phone__quote">
+                  <div class="phone__quote-tag">AMARA</div>
+                  <div class="phone__quote-text">
+                    &ldquo;The onions are translucent,and we didnt burn down the kitchen this time.😁lets add the tomatoes.&rdquo;
+                  </div>
+                </div>
+                <div class="phone__step">
+                  <div class="phone__step-label">Current step</div>
+                  <div class="phone__step-text">Add your onions now.</div>
+                </div>
+              </div>
+              <div class="phone__tabbar">
+                <div class="phone__tab phone__tab--active">
+                  <span class="phone__tab-icon">🏠</span>
+                  <span>Home</span>
+                </div>
+                <div class="phone__tab">
+                  <span class="phone__tab-icon">🍳</span>
+                  <span>Dishes</span>
+                </div>
+                <div class="phone__tab">
+                  <span class="phone__tab-icon">👤</span>
+                  <span>Profile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CULTURE ============================== -->
+    <section id="culture" class="section culture">
+      <div class="culture__container">
+        <div class="eyebrow culture__eyebrow" data-reveal>Cultural identity</div>
+        <h2 class="culture__title" data-reveal data-reveal-delay="1">
+          Preserving cooking knowledge while making it <em>accessible to everyone.</em>
+        </h2>
+
+        <div class="culture__grid">
+          <div class="culture-cell culture-cell--wide culture-cell--tall" data-reveal data-reveal-delay="1">
+            <img src="assets/images/vegetable.jpeg" alt="African ingredients" loading="lazy" />
+            <div aria-hidden="true" class="culture-cell__shade"></div>
+            <div class="culture-cell__label">
+              <div class="culture-cell__title">African ingredients</div>
+              <div class="culture-cell__sub">Vegetables</div>
+            </div>
+          </div>
+          <div class="culture-cell" data-reveal data-reveal-delay="2">
+            <img src="assets/images/french.jpeg" alt="Street food culture" loading="lazy" />
+            <div aria-hidden="true" class="culture-cell__shade"></div>
+            <div class="culture-cell__label">
+              <div class="culture-cell__title">French Culinary culture</div>
+              <div class="culture-cell__sub">Boeuf Bourguignon</div>
+            </div>
+          </div>
+          <div class="culture-cell" data-reveal data-reveal-delay="3">
+            <img src="assets/images/chicken.jpeg" alt="Traditional stews" loading="lazy" />
+            <div aria-hidden="true" class="culture-cell__shade"></div>
+            <div class="culture-cell__label">
+              <div class="culture-cell__title">Traditional British Chicken soup</div>
+              <div class="culture-cell__sub">cock a leekie</div>
+            </div>
+          </div>
+          <div class="culture-cell culture-cell--wide culture-cell--wide-sm" data-reveal data-reveal-delay="4">
+            <img src="assets/images/salad.jpeg" alt="Celebration dishes" loading="lazy" />
+            <div aria-hidden="true" class="culture-cell__shade"></div>
+            <div class="culture-cell__label">
+              <div class="culture-cell__title">For Everyone</div>
+              <div class="culture-cell__sub">Chopped</div>
+            </div>
+          </div>
+          <div class="culture-cell" data-reveal data-reveal-delay="5">
+            <img src="assets/images/ramen.jpeg" alt="Everyday soups" loading="lazy" />
+            <div aria-hidden="true" class="culture-cell__shade"></div>
+            <div class="culture-cell__label">
+              <div class="culture-cell__title">Asian noodle masterpiece</div>
+              <div class="culture-cell__sub">Chicken</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== WAITLIST ============================= -->
+    <section id="waitlist" class="section">
+      <!-- ambient blobs -->
+      <div aria-hidden="true" class="waitlist__blobs"></div>
+
+      <div class="waitlist__container">
+        <div class="waitlist__card glass-card" data-reveal>
+          <!-- gradient border glow -->
+          <div aria-hidden="true" class="waitlist__border-glow"></div>
+
+          <div class="waitlist__grid">
+            <div>
+              <div class="waitlist__badge">
+                <span class="waitlist__badge-dot animate-blink"></span>
+                Early access · Limited
+              </div>
+              <h2 class="waitlist__title">
+                Be one of the first to cook <span class="shimmer-text">with Krizell.</span>
+              </h2>
+              <p class="waitlist__lede">
+                Join thousands of home cooks already on the waitlist. We're rolling out
+                access slowly, to keep every conversation feeling like magic.
+              </p>
+
+              <div class="waitlist__stats">
+                
+                <div>
+                  <div class="stat__n">3</div>
+                  <div class="stat__l">Dishes at launch</div>
+                </div>
+                <div>
+                  <div class="stat__n">3</div>
+                  <div class="stat__l">Voice companions</div>
+                </div>
+              </div>
+
+              <div class="waitlist__chips">
+                <span class="waitlist__chip">Voice guided</span>
+                <span class="waitlist__chip">AI powered</span>
+                <span class="waitlist__chip">No spam</span>
+                <span class="waitlist__chip">Beta invites weekly</span>
+              </div>
+            </div>
+
+            <form
+                  class="waitlist__form"
+                  id="waitlist-form"
+                  action="https://formspree.io/f/mnjedvzr"
+                    method="POST">
+              <div class="waitlist__form-row">
+                <label class="field">
+                  <span class="field__icon">👋</span>
+                  <input name="firstName" type="text" placeholder="First name" required />
+                </label>
+                <label class="field">
+                  <span class="field__icon">✉️</span>
+                  <input name="email" type="email" placeholder="Email address" required />
+                </label>
+              </div>
+              <label class="field">
+                <span class="field__icon">🌍</span>
+                <select name="cuisine" required>
+                  <option value="" disabled selected>Favorite cuisine</option>
+                  <option>West African</option>
+                  <option>East African</option>
+                  <option>North African</option>
+                  <option>Caribbean</option>
+                  <option>Mediterranean</option>
+                  <option>Other</option>
+                </select>
+                <span aria-hidden="true" class="field__caret">▼</span>
+              </label>
+              <label class="field">
+                <span class="field__icon">🍳</span>
+                <select name="skill" required>
+                  <option value="" disabled selected>Cooking skill level</option>
+                  <option>Complete beginner</option>
+                  <option>Know the basics</option>
+                  <option>Intermediate cook</option>
+                  <option>Confident home cook</option>
+                </select>
+                <span aria-hidden="true" class="field__caret">▼</span>
+              </label>
+
+              <button type="submit" class="waitlist__submit" id="waitlist-submit">
+                <span class="waitlist__submit-label" id="waitlist-submit-label">
+                  Join the Waitlist
+                  <span aria-hidden="true">→</span>
+                </span>
+                <span aria-hidden="true" class="waitlist__submit-shine"></span>
+              </button>
+              <p class="waitlist__note">No spam, ever. Unsubscribe anytime.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo"><span class="nav__logo-dot">●</span> Krizell</div>
+          <p class="footer__tagline">
+            Your voice-guided cooking companion — preserving culinary knowledge
+            while making it accessible to everyone.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navigate</h4>
+          <ul class="footer__links">
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#product">Experience</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#waitlist">Early access</a></li>
+          </ul>
+        </div>
+        
+        <span>© <span id="footer-year">2026</span> Krizell. All rights reserved.</span>
+        <span>Made with love for every home cook.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
